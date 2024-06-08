@@ -12,7 +12,6 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color.fromARGB(255, 61, 44, 37),
         title: const Text(
           'ToKu App',
           style: TextStyle(
