@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/features/number_item.dart';
+import 'package:language_learning_app/models/number_model.dart';
 
 class NumbersPage extends StatelessWidget {
   const NumbersPage({super.key});
@@ -15,15 +17,11 @@ class NumbersPage extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
-        height: 100,
-        width: double.infinity,
-        color: const Color(0xffEF9235),
-        child: Row(
-          children: [
-            Image.asset("assets/images/numbers/number_one.png"),
-          ],
-        ),
+      body: ListView.builder(
+        itemCount: numbers.length,
+        itemBuilder: (context, index) {
+          return NumberCategory(model: numbers[index]);
+        },
       ),
     );
   }
