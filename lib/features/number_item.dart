@@ -1,4 +1,6 @@
+import 'package:audioplayers/audioplayers.dart';
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/features/audio_player.dart';
 import 'package:language_learning_app/models/number_model.dart';
 
 class NumberCategory extends StatelessWidget {
@@ -45,7 +47,9 @@ class NumberCategory extends StatelessWidget {
           ),
           IconButton(
             splashColor: const Color.fromARGB(255, 36, 58, 96),
-            onPressed: () {},
+            onPressed: () {
+              audioPlayer(model.soundPath);
+            },
             icon: const Icon(
               Icons.play_arrow,
               color: Colors.white,
