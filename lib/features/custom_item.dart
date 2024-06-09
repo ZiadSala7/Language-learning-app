@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:language_learning_app/features/audio_player.dart';
 import 'package:language_learning_app/models/number_model.dart';
 
-class NumberCategory extends StatelessWidget {
-  final NumberModel model;
-  const NumberCategory({
+class CustomCategory extends StatelessWidget {
+  final ItemModel model;
+  const CustomCategory({
     super.key,
     required this.model,
   });

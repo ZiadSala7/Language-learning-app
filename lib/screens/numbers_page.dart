@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:language_learning_app/features/custom_appbar.dart';
-import 'package:language_learning_app/features/number_item.dart';
+import 'package:language_learning_app/features/custom_item.dart';
 import 'package:language_learning_app/models/number_model.dart';
 
 class NumbersPage extends StatelessWidget {
@@ -13,7 +13,7 @@ class NumbersPage extends StatelessWidget {
       body: ListView.builder(
         itemCount: numbers.length,
         itemBuilder: (context, index) {
-          return NumberCategory(model: numbers[index]);
+          return CustomCategory(model: numbers[index]);
         },
       ),
     );
