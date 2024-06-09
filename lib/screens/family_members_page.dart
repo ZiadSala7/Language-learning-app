@@ -15,6 +15,7 @@ class FamilyMembersPage extends StatelessWidget {
         itemBuilder: (context, index) {
           return CustomCategory(
             model: family[index],
+            color: const Color(0xff558B37),
           );
         },
       ),

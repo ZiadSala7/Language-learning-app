@@ -13,7 +13,10 @@ class NumbersPage extends StatelessWidget {
       body: ListView.builder(
         itemCount: numbers.length,
         itemBuilder: (context, index) {
-          return CustomCategory(model: numbers[index]);
+          return CustomCategory(
+            model: numbers[index],
+            color: const Color(0xffEF9235),
+          );
         },
       ),
     );

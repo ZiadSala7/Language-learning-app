@@ -4,9 +4,11 @@ import 'package:language_learning_app/models/number_model.dart';
 
 class CustomCategory extends StatelessWidget {
   final ItemModel model;
+  final Color color;
   const CustomCategory({
     super.key,
     required this.model,
+    required this.color,
   });
 
   @override
@@ -14,7 +16,7 @@ class CustomCategory extends StatelessWidget {
     return Container(
       height: 100,
       width: double.infinity,
-      color: const Color(0xffEF9235),
+      color: color,
       child: Row(
         children: [
           Container(
@@ -24,7 +26,7 @@ class CustomCategory extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
                   model.jpName,
