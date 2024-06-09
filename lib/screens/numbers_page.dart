@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:language_learning_app/features/custom_appbar.dart';
 import 'package:language_learning_app/features/number_item.dart';
 import 'package:language_learning_app/models/number_model.dart';
 
@@ -8,15 +9,7 @@ class NumbersPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'Numbers',
-          style: TextStyle(
-            fontSize: 22,
-            color: Colors.white,
-          ),
-        ),
-      ),
+      appBar: appBar('Numbers'),
       body: ListView.builder(
         itemCount: numbers.length,
         itemBuilder: (context, index) {

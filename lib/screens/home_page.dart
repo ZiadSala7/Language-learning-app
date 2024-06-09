@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:language_learning_app/features/category_item.dart';
+import 'package:language_learning_app/features/custom_appbar.dart';
 import 'package:language_learning_app/screens/colors_page.dart';
 import 'package:language_learning_app/screens/family_members_page.dart';
 import 'package:language_learning_app/screens/numbers_page.dart';
@@ -11,15 +12,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text(
-          'ToKu App',
-          style: TextStyle(
-            fontSize: 22,
-            color: Colors.white,
-          ),
-        ),
-      ),
+      appBar: appBar('ToKu App'),
       body: Column(
         children: [
           CategoryItem(
